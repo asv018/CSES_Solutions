@@ -116,6 +116,14 @@ long long binpow(long long a, long long b) {
     return res;
 }
 
+/* 
+    Approach to solve these kind of questions : 
+    1. Prefix sum calculation -> Calculate the prefix sum while iterating through the array
+    2. Using hash map -> use an unordered_map to store the frequency of each prefix sum encountered. For each prefix sum 
+    check if there exists a prev prefix sum that when subtracted from the current prefix sum = x.
+    3. Count the subarray
+    4. Edge case -> Initialize the hash map with a prefix sum of 0 to handle cases where a subarray starting from index 0 has sum = x.
+*/
 
 void solve(){
     int n , x;
